@@ -11,3 +11,7 @@ def contact_views(request):
     return render(request,'website\contact.html')
     # return HttpResponse ("<h1>Contacts page</h1>")
 
+def test_views(request):
+    context={'name':'masoud','last_name':'rezaei'}
+    return render(request,'website\etest.html',context)
+
