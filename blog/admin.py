@@ -5,8 +5,8 @@ from blog.models import Post
 class PostAdmin(admin.ModelAdmin):
     date_hierarchy = 'cerated_date'
     empty_value_display = "-empty-"
-    list_display = ["title","counted_views","status","publish_date","cerated_date"]
-    list_filter=['status']
+    list_display = ["title","author","counted_views","status","publish_date","cerated_date"]
+    list_filter=['status',"author"]
     ordering = ["cerated_date"]
     search_fields = ["title","content"]
 
