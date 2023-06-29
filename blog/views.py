@@ -13,7 +13,7 @@ def blog_single(request,pid):
         contex={'post':post}
         return render (request,'blog/blog-single.html',contex)
 
-def test(request,pid):
-    post=get_object_or_404(Post,pk=pid)
-    contex={'post':post}
-    return render(request,'test.html',contex)
+def test(request):
+    # post=get_object_or_404(Post,pk=pid)
+    # contex={'post':post}
+    return render(request,'test.html')
