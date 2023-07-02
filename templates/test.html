@@ -8,7 +8,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Test page</h1>
- <p>test:{% totalposts %}</p>
+    <!-- <h1>Test page</h1>
+ <p>test:{% posts as totalposts %}</p>
+ {% for post in totalposts %}
+ <p>{{post.content|snippet}}</p>
+ {% endfor %} -->
+
+ 
+ <h1>Test page</h1>
+ <p>test: </p>
+ {% popularposts %}
+
 </body>
 </html>

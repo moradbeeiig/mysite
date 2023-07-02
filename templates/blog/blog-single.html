@@ -228,9 +228,9 @@
 				<div class="widget-wrap">
 					{% include 'blog/blog-search.html' %}
 					{% include 'blog/blog-writer.html' %}
-					{% include 'blog/blog-popular-posts.html' %}
+					{% latestposts 2 %}
 					{% include 'blog/blog-ads.html' %}
-					{% include 'blog/blog-post-categories.html' %}
+					{% postcategories %}
 					{% include 'blog/blog-newsletter.html' %}
 					{% include 'blog/blog-tag.html' %}
 				</div>
