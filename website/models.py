@@ -4,7 +4,7 @@ class Contact(models.Model):
     name=models.CharField(max_length=255)
     Email=models.EmailField()
     subject=models.CharField(max_length=255)
-    massage=models.TextField()
+    message=models.TextField()
     created_date=models.DateTimeField(auto_now_add=True)
     updated_date=models.DateTimeField(auto_now=True)
 
@@ -13,3 +13,8 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+    
+class NewsLetter(models.Model):
+    email=models.EmailField()
+    def __str__(self):
+        return self.email

@@ -27,10 +27,10 @@ def blog_single(request,pid):
         contex={'post':post}
         return render (request,'blog/blog-single.html',contex)
 
-def test(request):
+# def test(request):
     # post=get_object_or_404(Post,pk=pid)
     # contex={'post':post}
-    return render(request,'test.html')
+    # return render(request,'test.html')
 
 def blog_category(request,cat_name):
      posts=Post.objects.filter(status=1)
