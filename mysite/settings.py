@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'multi_captcha_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,7 +43,10 @@ INSTALLED_APPS = [
      "debug_toolbar",
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    "taggit",
+    'django_summernote',
     'website.apps.WebsiteConfig',
+    'captcha' ,
     'robots',
     'blog'
 ]
@@ -51,6 +55,38 @@ SITE_ID = 2
 
 ROBOTS_USE_HOST = False
 ROBOTS_USE_SITEMAP = False
+
+SUMMERNOTE_THEME = 'bs4'
+
+SUMMERNOTE_CONFIG = {
+    # Using SummernoteWidget - iframe mode, default
+    'iframe': True,
+    # You can put custom Summernote settings
+    'summernote': {
+        # As an example, using Summernote Air-mode
+        'airMode': False,
+
+        # Change editor size
+        'width': '100%',
+        'height': '480',
+
+        # Use proper language setting automatically (default)
+        'lang': None,
+
+        # Toolbar customization
+        # https://summernote.org/deep-dive/#custom-toolbar-popover
+        'toolbar': [
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'clear']],
+            ['fontname', ['fontname']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview', 'help']],
+        ]
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -150,3 +186,9 @@ INTERNAL_IPS = [
     "127.0.0.1",
     # ...
 ]
+
+X_FRAME_OPTIONS = "SAMEORIGIN"
+
+MULTI_CAPTCHA_ADMIN = {
+    'engine': 'simple-captcha',
+}
