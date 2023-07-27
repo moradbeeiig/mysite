@@ -25,6 +25,7 @@ class Post(models.Model):
     publish_date=models.DateTimeField(null=True)
     cerated_date=models.DateTimeField(auto_now_add=True)
     updated_date=models.DateTimeField(auto_now=True)
+    login_required=models.BooleanField(default=False)
 
     class Meta:
         ordering=['cerated_date']

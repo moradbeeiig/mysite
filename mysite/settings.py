@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'website.apps.WebsiteConfig',
     'captcha' ,
     'robots',
-    'blog'
+    'blog',
+    'accounts'
 ]
 
 SITE_ID = 2
